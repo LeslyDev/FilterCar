@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{% url 'main' %}" method="post">
+        {% csrf_token %}
+        Производитель
+        {{ form.manufacturer }} <br>
+        Модель
+        {{ form.model }} <br>
+        Год
+        {{ form.year }} <br>
+        Тип коробки передач
+        {{ form.kpp }} <br>
+        Цвет
+        {{ form.color }} <br>
+        <button type="submit">Search Car</button>
+    </form>
+</body>
+</html>

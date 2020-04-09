@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ListOfCars</title>
+</head>
+<body>
+    <table border="0">
+        <tr>
+            <td></td>
+            <td>Производитель</td>
+            <td>Модель</td>
+            <td>Год</td>
+            <td>Тип коробки передач</td>
+            <td>Цвет</td>
+        </tr>
+		{% for car in object_list %}
+		    <tr>
+                <td> {{ car.id }}  </td>
+                <td> {{ car.manufacturer }} </td>
+                <td> {{ car.model }} </td>
+                <td> {{ car.year }} </td>
+                <td> {{ car.kpp }} </td>
+                <td> {{ car.color }} </td>
+            </tr>
+		{% endfor %}
+    </table>
+    <form action="{% url 'm' %}" method="get">
+        <button type="submit">Search car</button>
+    </form>
+</body>
+</html>
